@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Grey+Qo&family=Mooli&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+html,
+body {
+  width: 100%;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 50px 0;
+}
+header h1 {
+  color: blue;
+  font-family: "Bangers", serif;
+  font-size: 3rem;
+  font-weight: normal;
+}
+header h1 span {
+  font-family: "Bangers", serif;
+  color: red;
+}
+header .search {
+  border: 2px solid #00000045;
+  overflow: hidden;
+  padding: 8px 25px;
+  border-radius: 10px;
+  display: flex;
+
+}
+header .search input {
+  font-size: 1.5rem;
+  outline: 0;
+  border: 0;
+}
+header .search button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border: 0;
+  background-color: transparent;
+}
+.main {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+/* error message starts */
+.error {
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* error message ends */
+
+/* Loader css starts here */
+.loading {
+  --speed-of-animation: 0.9s;
+  --gap: 6px;
+  --first-color: #1f4cff;
+  --second-color: #00ff08;
+  --third-color: #f2f602;
+  --fourth-color: #e65aff;
+  --fifth-color: #ff1f1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+  height: 100vh;
+ }
+ 
+ .loading span {
+  width: 10px;
+  height: 80px;
+  background: var(--first-color);
+  animation: scale var(--speed-of-animation) ease-in-out infinite;
+ }
+ 
+ .loading span:nth-child(2) {
+  background: var(--second-color);
+  animation-delay: -0.8s;
+ }
+ 
+ .loading span:nth-child(3) {
+  background: var(--third-color);
+  animation-delay: -0.7s;
+ }
+ 
+ .loading span:nth-child(4) {
+  background: var(--fourth-color);
+  animation-delay: -0.6s;
+ }
+ 
+ .loading span:nth-child(5) {
+  background: var(--fifth-color);
+  animation-delay: -0.5s;
+ }
+ 
+ @keyframes scale {
+  0%, 40%, 100% {
+   transform: scaleY(0.05);
+  }
+ 
+  20% {
+   transform: scaleY(1);
+  }
+ }
+/* Loader css ends here */
+
+
+/* responsive header */
+
+@media (max-width : 700px) {
+  header {
+    flex-direction: column ;
+  }
+}
+
+/* responsive header */
